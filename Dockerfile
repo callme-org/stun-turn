@@ -5,6 +5,8 @@ COPY ./turnserver.conf.template /etc/turnserver/turnserver.conf.template
 EXPOSE 3478
 EXPOSE 3478/udp
 
+RUN chmod +w /etc/turnserver/turnserver.conf
+
 CMD sed -e "s|\${HOST_IP}|${HOST_IP}|" \
     -e "s|\${DATABASE_HOST}|${DATABASE_HOST}|" \
     -e "s|\${DATABASE_NAME}|${DATABASE_NAME}|" \
