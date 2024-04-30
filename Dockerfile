@@ -5,3 +5,4 @@ CMD envsubst < turnserver.conf > /etc/turnserver.conf && turnserver -c /etc/cotu
 
 EXPOSE 3478
 EXPOSE 3478/udp
+EXPOSE 8484
